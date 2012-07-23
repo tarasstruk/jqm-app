@@ -1,0 +1,15 @@
+<div data-role="page">
+
+  <div data-role="header">
+    <%= render 'header' %>
+  </div>
+
+  <div data-role="content">
+    <ul data-role="listview" data-inset="true">
+      <% for job in @jobs %>
+          <li><%= link_to job.title, search_job_path(job.id) %></li>
+      <% end %>
+    </ul>
+  </div>
+
+</div>
